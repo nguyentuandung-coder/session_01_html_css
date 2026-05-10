@@ -88,3 +88,54 @@
 .portfolio-item:hover .portfolio-overlay {
   opacity: 1;
 }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: all 0.3s ease;
+
+  z-index: 2000;
+}
+
+.lightbox:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img {
+  width: 80%;
+
+  max-width: 800px;
+  border-radius: 12px;
+}
+
+.lightbox-close {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 1023px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}

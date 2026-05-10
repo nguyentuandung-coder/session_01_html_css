@@ -66,3 +66,9 @@
   color: #6366f1;
   width: 80%;
 }
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
